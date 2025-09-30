@@ -43,8 +43,8 @@ void pre_auton(void) {
   // All activities that occur before the competition starts
   
   // Initialize all systems
-  drivetrain.setBrakeType(BrakeSettings::DRIVETRAIN_BRAKE);
-  drivetrain.resetEncoders();
+  robotDrivetrain.setBrakeType(BrakeSettings::DRIVETRAIN_BRAKE);
+  robotDrivetrain.resetEncoders();
   
   intakeSystem.setBrakeType(BrakeSettings::INTAKE_BRAKE);
   antennaSystem.setBrakeType(BrakeSettings::ANTENNA_BRAKE);
@@ -80,7 +80,7 @@ void autonomous(void) {
   // Example autonomous routine
   
   // Reset encoders for autonomous
-  drivetrain.resetEncoders();
+  robotDrivetrain.resetEncoders();
   antennaSystem.resetPosition();
   
   // Ensure all systems are stopped at start
@@ -90,16 +90,16 @@ void autonomous(void) {
   // Example autonomous sequence:
   
   // 1. Drive forward for 2 seconds
-  drivetrain.arcadeDrive(50, 0);  // 50% forward, 0% turn
+  robotDrivetrain.arcadeDrive(50, 0);  // 50% forward, 0% turn
   wait(2, sec);
   
   // 2. Start intake while turning
   intakeSystem.startAllIntakes();
-  drivetrain.arcadeDrive(0, 30);  // 0% forward, 30% turn
+  robotDrivetrain.arcadeDrive(0, 30);  // 0% forward, 30% turn
   wait(1, sec);
   
   // 3. Stop everything
-  drivetrain.stop();
+  robotDrivetrain.stop();
   intakeSystem.stopAllIntakes();
   
   // Add your autonomous code here
@@ -126,7 +126,7 @@ void usercontrol(void) {
     double turnInput = getTurnInput();
     
     // Use arcade drive control
-    drivetrain.arcadeDrive(forwardInput, turnInput);
+    robotDrivetrain.arcadeDrive(forwardInput, turnInput);
     
     // Update all systems
     intakeSystem.update();

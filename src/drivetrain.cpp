@@ -98,4 +98,4 @@ double Drivetrain::getAveragePosition() {
 }
 
 // Create global drivetrain instance
-Drivetrain drivetrain;
+Drivetrain robotDrivetrain;

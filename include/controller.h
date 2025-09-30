@@ -7,7 +7,7 @@ using namespace vex;
 
 // Forward declarations
 class Drivetrain;
-extern Drivetrain drivetrain;
+extern Drivetrain robotDrivetrain;
 
 // Controller configuration
 extern controller Controller1;

@@ -52,17 +52,17 @@ namespace Controls {
     // Left Stick Y-axis: Forward/Backward
     // Right Stick X-axis: Turning
     
-    // Function Buttons
-    const auto INTAKE_MOTOR_2_BUTTON = controller::button::X;      // Hold X for intake motor 2
-    const auto TOP_INTAKE_BUTTON = controller::button::L1;         // L1 for top intake
-    const auto BOTTOM_INTAKE_BUTTON = controller::button::R1;      // R1 for bottom intake
-    const auto REVERSE_INTAKE_BUTTON = controller::button::R2;     // R2 for reverse intake
-    const auto EMERGENCY_STOP_BUTTON = controller::button::Y;      // Y for emergency stop
-    const auto ANTENNA_BUTTON = controller::button::B;             // B for antenna control
+    // Function Buttons (using correct VEX V5 button names)
+    const auto INTAKE_MOTOR_2_BUTTON = controller::button::buttonX;      // Hold X for intake motor 2
+    const auto TOP_INTAKE_BUTTON = controller::button::buttonL1;         // L1 for top intake
+    const auto BOTTOM_INTAKE_BUTTON = controller::button::buttonR1;      // R1 for bottom intake
+    const auto REVERSE_INTAKE_BUTTON = controller::button::buttonR2;     // R2 for reverse intake
+    const auto EMERGENCY_STOP_BUTTON = controller::button::buttonY;      // Y for emergency stop
+    const auto ANTENNA_BUTTON = controller::button::buttonB;             // B for antenna control
     
     // Utility Buttons
-    const auto ENCODER_DISPLAY_BUTTON = controller::button::A;     // A to show encoder values
-    const auto RESET_ENCODERS_BUTTON = controller::button::Down;   // Down arrow to reset encoders
+    const auto ENCODER_DISPLAY_BUTTON = controller::button::buttonA;     // A to show encoder values
+    const auto RESET_ENCODERS_BUTTON = controller::button::buttonDown;   // Down arrow to reset encoders
 }
 
 // ================================

@@ -39,6 +39,6 @@ public:
 };
 
 // Global drivetrain instance
-extern Drivetrain drivetrain;
+extern Drivetrain robotDrivetrain;
 
 #endif

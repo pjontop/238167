@@ -117,8 +117,8 @@ void handleControllerInput() {
         Controller1.Screen.clearScreen();
         Controller1.Screen.setCursor(1, 1);
         Controller1.Screen.print("L:%.1f R:%.1f", 
-                                drivetrain.getLeftPosition(), 
-                                drivetrain.getRightPosition());
+                                robotDrivetrain.getLeftPosition(), 
+                                robotDrivetrain.getRightPosition());
         Controller1.Screen.setCursor(2, 1);
         Controller1.Screen.print("Ant:%.1f", antennaSystem.getPosition());
         Controller1.rumble(Haptics::FUNCTION_ACTIVATED);
@@ -126,7 +126,7 @@ void handleControllerInput() {
     
     // Handle Down button (Reset encoders)
     if (currentDownState && !lastDownState) {
-        drivetrain.resetEncoders();
+        robotDrivetrain.resetEncoders();
         antennaSystem.resetPosition();
         Controller1.rumble(Haptics::FUNCTION_DEACTIVATED);
         Controller1.Screen.clearScreen();
