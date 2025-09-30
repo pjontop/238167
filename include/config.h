@@ -53,16 +53,16 @@ namespace Controls {
     // Right Stick X-axis: Turning
     
     // Function Buttons (using correct VEX V5 button names)
-    const auto INTAKE_MOTOR_2_BUTTON = ButtonX;      // Hold X for intake motor 2
-    const auto TOP_INTAKE_BUTTON = ButtonL1;         // L1 for top intake
-    const auto BOTTOM_INTAKE_BUTTON = ButtonR1;      // R1 for bottom intake
-    const auto REVERSE_INTAKE_BUTTON = ButtonR2;     // R2 for reverse intake
-    const auto EMERGENCY_STOP_BUTTON = ButtonY;      // Y for emergency stop
-    const auto ANTENNA_BUTTON = ButtonB;             // B for antenna control
+    const auto INTAKE_MOTOR_2_BUTTON = Controller1.ButtonX;      // Hold X for intake motor 2
+    const auto TOP_INTAKE_BUTTON = Controller1.ButtonL1;         // L1 for top intake
+    const auto BOTTOM_INTAKE_BUTTON = Controller1.ButtonR1;      // R1 for bottom intake
+    const auto REVERSE_INTAKE_BUTTON = Controller1.ButtonR2;     // R2 for reverse intake
+    const auto EMERGENCY_STOP_BUTTON = Controller1.ButtonY;      // Y for emergency stop
+    const auto ANTENNA_BUTTON = Controller1.ButtonB;             // B for antenna control
     
     // Utility Buttons
-    const auto ENCODER_DISPLAY_BUTTON = ButtonA;     // A to show encoder values
-    const auto RESET_ENCODERS_BUTTON = ButtonDown;   // Down arrow to reset encoders
+    const auto ENCODER_DISPLAY_BUTTON = Controller1.ButtonA;     // A to show encoder values
+    const auto RESET_ENCODERS_BUTTON = Controller1.ButtonDown;   // Down arrow to reset encoders
 }
 
 // ================================
