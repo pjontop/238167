@@ -37,31 +37,31 @@ void Drivetrain::arcadeDrive(double forward, double turn) {
     double rightSpeed = forward - turn;
     
     // Clamp values to [-100, 100] range
-    leftSpeed = std::max(-100.0, std::min(100.0, leftSpeed));
-    rightSpeed = std::max(-100.0, std::min(100.0, rightSpeed));
+    leftSpeed = (leftSpeed < -100.0) ? -100.0 : (leftSpeed > 100.0) ? 100.0 : leftSpeed;
+    rightSpeed = (rightSpeed < -100.0) ? -100.0 : (rightSpeed > 100.0) ? 100.0 : rightSpeed;
     
     // Set motor velocities
     leftMotors.setVelocity(leftSpeed, percent);
     rightMotors.setVelocity(rightSpeed, percent);
     
     // Spin the motors
-    leftMotors.spin(forward);
-    rightMotors.spin(forward);
+    leftMotors.spin(vex::forward);
+    rightMotors.spin(vex::forward);
 }
 
 // Tank drive control - independent left and right side control
 void Drivetrain::tankDrive(double leftSpeed, double rightSpeed) {
     // Clamp values to [-100, 100] range
-    leftSpeed = std::max(-100.0, std::min(100.0, leftSpeed));
-    rightSpeed = std::max(-100.0, std::min(100.0, rightSpeed));
+    leftSpeed = (leftSpeed < -100.0) ? -100.0 : (leftSpeed > 100.0) ? 100.0 : leftSpeed;
+    rightSpeed = (rightSpeed < -100.0) ? -100.0 : (rightSpeed > 100.0) ? 100.0 : rightSpeed;
     
     // Set motor velocities
     leftMotors.setVelocity(leftSpeed, percent);
     rightMotors.setVelocity(rightSpeed, percent);
     
     // Spin the motors
-    leftMotors.spin(forward);
-    rightMotors.spin(forward);
+    leftMotors.spin(vex::forward);
+    rightMotors.spin(vex::forward);
 }
 
 // Stop all drivetrain motors
